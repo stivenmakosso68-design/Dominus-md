@@ -1,0 +1,18 @@
+import fs from "fs"
+import stylizedChar from "./fancy.js"
+
+export default function stylizedCardMessage(text) {
+  return {
+    text: stylizedChar(text),
+    contextInfo: {
+      externalAdReply: {
+        title: "𝐅𝐫𝐞𝐞𝐳𝐞 𝐝𝐨𝐦𝐢𝐧𝐮𝐬 𝐯𝟏",
+        body: "𝐅𝐫𝐞𝐞𝐳𝐞 𝐝𝐨𝐦𝐢𝐧𝐮𝐬 𝐯𝟏",
+        thumbnail: fs.readFileSync("./database/𝐅𝐫𝐞𝐞𝐳𝐞 𝐝𝐨𝐦𝐢𝐧𝐮𝐬 𝐯𝟏"),
+        sourceUrl: "https://whatsapp.com",
+        mediaType: 1,
+        renderLargerThumbnail: false
+      }
+    }
+  }
+}
